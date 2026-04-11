@@ -1,15 +1,49 @@
 ﻿import sqlite3
 import tkinter as tk
 
-# TODO: Create Database
+# TODO: 1. Create Database
+'''
+    Needed functions:
+        - Get meal
+        - Add meal
+''' 
+
+
 # TODO: Create GUI
-# TODO: Create layout
+# TODO: 2. Create layout
+# ---------------------------------------------------
+# |   -------  -------  -------  -------  -------   |
+# |   |     |  |     |  |     |  |     |  |     |   |
+# |   |     |  |     |  |     |  |     |  |     |   |
+# |   -------  -------  -------  -------  -------   |
+# |                                                 |
+# |   -------  -------  -------  -------  -------   |
+# |   |   1 |  |   2 |  |   3 |  |   4 |  |   5 |   |
+# |   | meal|  | meal|  |     |  |     |  |     |   |
+# |   -------  -------  -------  -------  -------   |
+# |                                                 |
+# |   -------  -------  -------  -------  -------   |
+# |   |     |  |     |  |     |  |     |  |     |   |
+# |   |     |  |     |  |     |  |     |  |     |   |
+# |   -------  -------  -------  -------  -------   |
+# ---------------------------------------------------
+
+class DayCard(tk.Frame):
+    def __init__(self, meal, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.meal = meal
+        self.bind("<Button-1>", self.onClick)
+
+    def onClick(self, *args):
+        print("Clicked")
 
 def main():
     app = tk.Tk()
     app.title("Food Calendar")
     app.geometry("350x200")
     app.iconphoto(False, tk.PhotoImage(file="apple.ico"))
+    card = DayCard("Meal", master=app, width=100, height=100, bg="blue")
+    card.pack()
 
     app.mainloop()
 
