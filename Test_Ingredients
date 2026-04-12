@@ -19,14 +19,14 @@ def main():
 #    main()
      
 #class Fruit:
-    # Constructor: Initializes the object's properties
-    def __init__(self, name, color):
-        self.name = name   # Attribute
-        self.color = color # Attribute
+#     Constructor: Initializes the object's properties
+#    def __init__(self, name, color):
+#        self.name = name   # Attribute
+#        self.color = color # Attribute
 
     # Method: Behavior
-    def describe(self):
-        return f"This is a {self.color} {self.name}."
+#    def describe(self):
+#        return f"This is a {self.color} {self.name}."
 
 # Creating Instances (Objects)
 #apple = Fruit("Apple", "red")
