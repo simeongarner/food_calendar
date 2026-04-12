@@ -10,13 +10,13 @@ def main():
     app.title("Food Calendar")
     app.geometry("350x200")
     app.iconphoto(False, tk.PhotoImage(file="apple.ico"))
-    info_label = tk.Label(app, text="Welcome to the Meal Planner", font=("Arial", :))
+    info_label = tk.Label(app, text="Welcome to the Meal Planner", font=("Arial"))
     info_label.pack(pady=20)
     info_label.config(text="Today's Breakfast: Pancakes")
     app.mainloop()
 
-#if __name__ == "__main__":
-#    main()
+if __name__ == "__main__":
+   main()
      
 #class Fruit:
 #     Constructor: Initializes the object's properties
@@ -37,11 +37,11 @@ def main():
 #print(blueberry.color)      # Output: blue
 
 #class Food:
-    def __init__(self, name, category):
-        self.name = name
+#    def __init__(self, name, category):
+#        self.name = name
 
-    def info(self):
-        return f"{self.name} is a type of {self.category}"
+#    def info(self):
+#        return f"{self.name} is a type of {self.category}"
     
 #
 #fruit1 = Food("Apple", "Fruit")
